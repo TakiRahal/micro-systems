@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "watch:host": "concurrently \"npm run build:watch --prefix host-app\" \"npm run preview --prefix host-app\"",
+    "watch:user": "concurrently \"npm run build:watch --prefix user-app\" \"npm run preview --prefix user-app\"",
+    "watch:offer": "concurrently \"npm run build:watch --prefix offer-app\" \"npm run preview --prefix offer-app\"",
+    "watch:all": "concurrently -c auto -n HOST,USER,OFFER \"npm run watch:host\" \"npm run watch:user\" \"npm run watch:offer\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
